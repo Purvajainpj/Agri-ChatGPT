@@ -60,16 +60,16 @@ def get_current_index_name():
     )
     
     indexes = list(admin_client.list_index_names())
-    if "index_1" in indexes:
-        return "index_1"
+    if "index_1f" in indexes:
+        return "index_1f"
     elif "index_2" in indexes:
-        return "index_2"
+        return "index_2f"
     else:
-        return "index_1"  # Default to index_1 if neither exists
+        return "index_1f"  # Default to index_1 if neither exists
 
 def get_new_index_name():
     current_index = get_current_index_name()
-    return "index_2" if current_index == "index_1" else "index_1"
+    return "index_2f" if current_index == "index_1f" else "index_1f"
 
 def create_index(index_name):
     print(f"Creating index: {index_name}")
